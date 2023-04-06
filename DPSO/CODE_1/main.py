@@ -98,8 +98,7 @@ class Main:
         
         open_facility_indexes = np.where(facility_vector)[0]
         if len(open_facility_indexes) == 0:
-            self.fitness_value = sys.maxsize
-            return
+            return sys.maxsize
         temp = np.min(Main.c[:, open_facility_indexes], axis=1)
         result += np.sum(temp)
 
